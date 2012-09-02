@@ -1,0 +1,13 @@
+diff --git a/libastro-3.7.5/earthsat.c b/libastro-3.7.5/earthsat.c
+index 466beb1..035f9f0 100644
+--- a/libastro-3.7.5/earthsat.c
++++ b/libastro-3.7.5/earthsat.c
+@@ -178,6 +178,8 @@ obj_earthsat (Now *np, Obj *op)
+ 	op->s_gaera = dtmp;
+ 	op->s_gaedec = atan2 (SatZ, sqrt(SatX*SatX + SatY*SatY));
+ 
++	return (0);
++
+ 	/* find topocentric from site location */
+ 	GetSitPosition(SiteLat,SiteLong,SiteAltitude,CrntTime,
+ 		    &SiteX,&SiteY,&SiteZ,&SiteVX,&SiteVY,SiteMatrix);
